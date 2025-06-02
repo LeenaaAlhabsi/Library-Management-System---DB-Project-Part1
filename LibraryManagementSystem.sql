@@ -1,5 +1,6 @@
-use [ LibraryManagementSystem]
+﻿use LibraryManagementSystem
 
+---------------------------------------------------- project part one -------------------------------------------------------
 ----Tables-----
 
 -- Library
@@ -45,19 +46,20 @@ CREATE TABLE Book (
         ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- Loan
+-- Lone
 CREATE TABLE Loan (
     MID INT NOT NULL,
     BID INT NOT NULL,
     LoanDate DATE NOT NULL,
     DueDate DATE NOT NULL,
     ReturnDate DATE,
-    Status VARCHAR(20) NOT NULL DEFAULT 'Issued' CHECK (Status IN ('Issued', 'Returned', 'Overdue')),
+    Status VARCHAR(20) NOT NULL DEFAULT 'Issued' 
+        CHECK (Status IN ('Issued', 'Returned', 'Overdue')),
     PRIMARY KEY (MID, BID, LoanDate),
     FOREIGN KEY (MID) REFERENCES Member(ID)
-        ON DELETE CASCADE ON UPDATE CASCADE,
+        ON DELETE NO ACTION ON UPDATE CASCADE,
     FOREIGN KEY (BID) REFERENCES Book(ID)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON DELETE NO ACTION ON UPDATE CASCADE
 );
 
 -- Payment
@@ -84,7 +86,7 @@ CREATE TABLE Review (
     FOREIGN KEY (MID) REFERENCES Member(ID)
         ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (BID) REFERENCES Book(ID)
-        ON DELETE CASCADE ON UPDATE CASCADE
+        ON DELETE CASCADE ON UPDATE CASCADE  
 );
 
 ------ real-world data -----
@@ -113,6 +115,8 @@ INSERT INTO Member (FullName, Email, PhoneNumber, StartDate) VALUES
 ('Ethan Lewis', 'ethan@example.com', '444333222', '2023-06-12'),
 ('Sophia Hall', 'sophia@example.com', '333222111', '2023-07-01'),
 ('Mason King', 'mason@example.com', '222111000', '2023-07-15');
+
+
 
 --Books
 INSERT INTO Book (ISBN, Title, Genre, Price, ShelfLocation, LID) VALUES
@@ -155,7 +159,7 @@ INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate) VALUES
 
 --Reviews
 INSERT INTO Review (MID, BID, ReviewDate, Comments, Rating) VALUES
-(1, 1, '2024-05-15', 'Great book!', 5),
+(1, 1, '2024-05-16', 'Another review for same book', 4),
 (3, 3, '2024-05-17', 'Kids loved it!', 5),
 (4, 4, '2024-05-18', 'A classic piece.', 4),
 (6, 6, '2024-05-20', 'Detailed and clear.', 5),
@@ -251,4 +255,99 @@ INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate) VALUES
 
   select *
  from Review
+
+--- Error-Based Learning 
+
+DELETE FROM Member WHERE ID = 1;
+
+DELETE FROM Member WHERE ID = 3;
+
+DELETE FROM Book WHERE ID = 6;
+
+DELETE FROM Book WHERE ID = 1;
+
+INSERT INTO Loan (MID, BID, LoanDate, DueDate, ReturnDate, Status)
+VALUES (999, 2, '2025-06-01', '2025-06-10', NULL, 'Issued');
+
+INSERT INTO Loan (MID, BID, LoanDate, DueDate, ReturnDate, Status)
+VALUES (1, 999, '2025-06-01', '2025-06-10', NULL, 'Issued');
+
+UPDATE Book SET Genre = 'Sci-Fi' WHERE ID = 2;
+
+INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate)
+VALUES ('2025-06-01', 0, 'Cash', 1, 1, '2024-05-01');
+
+INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate)
+VALUES ('2025-06-01', 5.00, NULL, 1, 1, '2024-05-01');
+
+INSERT INTO Review (MID, BID, ReviewDate, Comments, Rating)
+VALUES (1, 999, '2025-06-01', 'Fake book', 3);
+
+INSERT INTO Review (MID, BID, ReviewDate, Comments, Rating)
+VALUES (999, 1, '2025-06-01', 'Ghost member review', 4);
+
+UPDATE Loan SET MID = 999 WHERE MID = 1 AND BID = 1 AND LoanDate = '2024-05-01';
+
+--- SELECT Queries 
+
+-- GET /loans/overdue → List all overdue loans with member name, book title, due date 
+SELECT M.FullName AS MemberName, B.Title AS BookTitle, L.DueDate
+FROM Loan L JOIN Member M ON L.MID = M.ID
+JOIN Book B ON L.BID = B.ID
+WHERE L.Status = 'Issued' AND L.DueDate < GETDATE();
+
+-- GET /books/unavailable → List books not available 
+SELECT DISTINCT B.ID AS BookID, B.Title, B.Genre, B.ISBN
+FROM Book B JOIN Loan L ON B.ID = L.BID
+WHERE L.Status = 'Issued';
+
+-- GET /members/top-borrowers → Members who borrowed >2 books
+SELECT M.ID AS MemberID, M.FullName, COUNT(*) AS BorrowedBooks
+FROM Loan L JOIN Member M ON L.MID = M.ID
+GROUP BY M.ID, M.FullName
+HAVING COUNT(*) > 2;
+
+
+-- GET /books/:id/ratings → Show average rating per book 
+SELECT B.ID AS BookID, B.Title, AVG(R.Rating) AS AverageRating
+FROM Review R JOIN Book B ON R.BID = B.ID
+WHERE  B.ID = 3
+GROUP BY B.ID, B.Title;
+
+
+-- GET /libraries/:id/genres → Count books by genre 
+SELECT B.Genre, COUNT(*) AS BookCount
+FROM Book B
+WHERE B.LID = 1
+GROUP BY B.Genre;
+
+
+-- GET /members/inactive → List members with no loans 
+SELECT M.ID AS MemberID, M.FullName, M.Email
+FROM Member M LEFT JOIN Loan L ON M.ID = L.MID
+WHERE L.LoanDate IS NULL;
+
+
+-- GET /payments/summary → Total fine paid per member 
+SELECT M.ID AS MemberID, M.FullName, SUM(P.Amount) AS TotalFinePaid
+FROM Payment P JOIN Member M ON P.MID = M.ID
+GROUP BY M.ID, M.FullName;
+
+
+
+-- GET /reviews → Reviews with member and book info
+SELECT M.FullName AS MemberName, B.Title AS BookTitle, R.ReviewDate, R.Comments, R.Rating
+FROM Review R JOIN Member M ON R.MID = M.ID
+JOIN Book B ON R.BID = B.ID;
+
+---- reflect on: 
+-- What part was the most difficult? 
+--	Error-Based Learning 
+-- Which SQL command (DDL, DML, DQL) did you learn the most from? 
+--	SELECT Queries 
+-- What did you discover from your error logs that made you think like a real developer?
+--	how ON DELETE CASCADE ON UPDATE CASCADE work
+
+
+
 
