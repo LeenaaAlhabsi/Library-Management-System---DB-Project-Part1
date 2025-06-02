@@ -1,0 +1,377 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36 Edg/132.0.0.0" version="27.1.1">
+  <diagram name="Page-1" id="ZysijCBExkoPPrbeg61E">
+    <mxGraphModel dx="1418" dy="786" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" vertex="1" parent="1">
+          <mxGeometry x="40" y="70" width="1050" height="1590" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry width="1050" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-3" value="&#xa;Attempted Action&#xa;&#xa;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-2">
+          <mxGeometry width="210" height="48" as="geometry">
+            <mxRectangle width="210" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-4" value="&#xa;SQL Statement&#xa;&#xa;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-2">
+          <mxGeometry x="210" width="220" height="48" as="geometry">
+            <mxRectangle width="220" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-5" value="&#xa;Error Message&#xa;&#xa;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-2">
+          <mxGeometry x="430" width="240" height="48" as="geometry">
+            <mxRectangle width="240" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-6" value="&#xa;Cause&#xa;&#xa;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-2">
+          <mxGeometry x="670" width="170" height="48" as="geometry">
+            <mxRectangle width="170" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-7" value="&#xa;Resolution&#xa;&#xa;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-2">
+          <mxGeometry x="840" width="210" height="48" as="geometry">
+            <mxRectangle width="210" height="48" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-8" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="48" width="1050" height="142" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-9" value="Attempted to delete a member who has existing loans" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-8">
+          <mxGeometry width="210" height="142" as="geometry">
+            <mxRectangle width="210" height="142" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-10" value="DELETE FROM Member WHERE ID = 1;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-8">
+          <mxGeometry x="210" width="220" height="142" as="geometry">
+            <mxRectangle width="220" height="142" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-11" value="Msg 547, Level 16, State 0, Line 259&#xa;The DELETE statement conflicted with the REFERENCE constraint &quot;FK__Loan__MID__48CFD27E&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Loan&quot;, column &#39;MID&#39;.&#xa;The statement has been terminated." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-8">
+          <mxGeometry x="430" width="240" height="142" as="geometry">
+            <mxRectangle width="240" height="142" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-12" value="Member 1 is referenced in the &lt;code data-end=&quot;634&quot; data-start=&quot;628&quot;&gt;Loan&lt;/code&gt; table (foreign key)." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-8">
+          <mxGeometry x="670" width="170" height="142" as="geometry">
+            <mxRectangle width="170" height="142" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-13" value="Either delete the related loans first or set &lt;code data-end=&quot;738&quot; data-start=&quot;719&quot;&gt;ON DELETE CASCADE&lt;/code&gt; for &lt;code data-end=&quot;753&quot; data-start=&quot;743&quot;&gt;Loan.MID&lt;/code&gt;." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-8">
+          <mxGeometry x="840" width="210" height="142" as="geometry">
+            <mxRectangle width="210" height="142" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="190" width="1050" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-15" value="&amp;nbsp;Attempted to delete a member who has written book reviews" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-14">
+          <mxGeometry width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-16" value="DELETE FROM Member WHERE ID = 3;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-14">
+          <mxGeometry x="210" width="220" height="130" as="geometry">
+            <mxRectangle width="220" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-17" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 261&lt;/div&gt;&lt;div&gt;The DELETE statement conflicted with the REFERENCE constraint &quot;FK__Loan__MID__48CFD27E&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Loan&quot;, column &#39;MID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-14">
+          <mxGeometry x="430" width="240" height="130" as="geometry">
+            <mxRectangle width="240" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-18" value="Member 3 wrote a review that exists in the &lt;code data-end=&quot;1134&quot; data-start=&quot;1126&quot;&gt;Review&lt;/code&gt; table" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-14">
+          <mxGeometry x="670" width="170" height="130" as="geometry">
+            <mxRectangle width="170" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-19" value="Enable &lt;code data-end=&quot;1186&quot; data-start=&quot;1167&quot;&gt;ON DELETE CASCADE&lt;/code&gt; on the &lt;code data-end=&quot;1202&quot; data-start=&quot;1194&quot;&gt;Review&lt;/code&gt; table or delete the review first." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-14">
+          <mxGeometry x="840" width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-20" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="320" width="1050" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-21" value="Attempted to delete a book that is currently on loan" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-20">
+          <mxGeometry width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-22" value="DELETE FROM Book WHERE ID = 6;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-20">
+          <mxGeometry x="210" width="220" height="130" as="geometry">
+            <mxRectangle width="220" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-23" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 263&lt;/div&gt;&lt;div&gt;The DELETE statement conflicted with the REFERENCE constraint &quot;FK__Loan__BID__49C3F6B7&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Loan&quot;, column &#39;BID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-20">
+          <mxGeometry x="430" width="240" height="130" as="geometry">
+            <mxRectangle width="240" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-24" value="Book is currently loaned to a member." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-20">
+          <mxGeometry x="670" width="170" height="130" as="geometry">
+            <mxRectangle width="170" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-25" value="Book must be returned (update &lt;code data-end=&quot;1646&quot; data-start=&quot;1640&quot;&gt;Loan&lt;/code&gt;) or remove associated loan records." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-20">
+          <mxGeometry x="840" width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-26" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="450" width="1050" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-27" value="Attempted to delete a book that has multiple reviews" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-26">
+          <mxGeometry width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-28" value="DELETE FROM Book WHERE ID = 1;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-26">
+          <mxGeometry x="210" width="220" height="130" as="geometry">
+            <mxRectangle width="220" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-29" value="Msg 547, Level 16, State 0, Line 265&#xa;The DELETE statement conflicted with the REFERENCE constraint &quot;FK__Loan__BID__49C3F6B7&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Loan&quot;, column &#39;BID&#39;." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-26">
+          <mxGeometry x="430" width="240" height="130" as="geometry">
+            <mxRectangle width="240" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-30" value="Book is reviewed in the &lt;code data-end=&quot;2034&quot; data-start=&quot;2026&quot;&gt;Review&lt;/code&gt; table." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-26">
+          <mxGeometry x="670" width="170" height="130" as="geometry">
+            <mxRectangle width="170" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-31" value="Either delete the reviews or ensure cascading delete." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-26">
+          <mxGeometry x="840" width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-32" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="580" width="1050" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-33" value="Inserting a loan for a member who doesn’t exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-32">
+          <mxGeometry width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-34" value="&lt;div&gt;INSERT INTO Loan (MID, BID, LoanDate, DueDate, ReturnDate, Status)&lt;/div&gt;&lt;div&gt;VALUES (999, 2, &#39;2025-06-01&#39;, &#39;2025-06-10&#39;, NULL, &#39;Issued&#39;);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-32">
+          <mxGeometry x="210" width="220" height="130" as="geometry">
+            <mxRectangle width="220" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-35" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 267&lt;/div&gt;&lt;div&gt;The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK__Loan__MID__48CFD27E&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Member&quot;, column &#39;ID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-32">
+          <mxGeometry x="430" width="240" height="130" as="geometry">
+            <mxRectangle width="240" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-36" value="No member with ID = 999 exists" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-32">
+          <mxGeometry x="670" width="170" height="130" as="geometry">
+            <mxRectangle width="170" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-37" value="Use an existing &lt;code data-end=&quot;2566&quot; data-start=&quot;2555&quot;&gt;Member.ID&lt;/code&gt; or register the member first" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-32">
+          <mxGeometry x="840" width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-38" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="710" width="1050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-39" value="Inserting a loan for a book that doesn’t exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-38">
+          <mxGeometry width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-40" value="&lt;div&gt;INSERT INTO Loan (MID, BID, LoanDate, DueDate, ReturnDate, Status)&lt;/div&gt;&lt;div&gt;VALUES (1, 999, &#39;2025-06-01&#39;, &#39;2025-06-10&#39;, NULL, &#39;Issued&#39;);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-38">
+          <mxGeometry x="210" width="220" height="120" as="geometry">
+            <mxRectangle width="220" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-41" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 270&lt;/div&gt;&lt;div&gt;The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK__Loan__BID__49C3F6B7&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Book&quot;, column &#39;ID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-38">
+          <mxGeometry x="430" width="240" height="120" as="geometry">
+            <mxRectangle width="240" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-42" value="Book ID 999 does not exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-38">
+          <mxGeometry x="670" width="170" height="120" as="geometry">
+            <mxRectangle width="170" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-43" value="Verify book ID or insert the book first" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-38">
+          <mxGeometry x="840" width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-44" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="830" width="1050" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-45" value="Updating a book&#39;s genre to an invalid value" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-44">
+          <mxGeometry width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-46" value="&lt;div&gt;UPDATE Book SET Genre = &#39;Sci-Fi&#39; WHERE ID = 2;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-44">
+          <mxGeometry x="210" width="220" height="130" as="geometry">
+            <mxRectangle width="220" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-47" value="Msg 547, Level 16, State 0, Line 273&#xa;The UPDATE statement conflicted with the CHECK constraint &quot;CK__Book__Genre__412EB0B6&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Book&quot;, column &#39;Genre&#39;." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-44">
+          <mxGeometry x="430" width="240" height="130" as="geometry">
+            <mxRectangle width="240" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-48" value="&lt;code data-end=&quot;3352&quot; data-start=&quot;3342&quot;&gt;&#39;Sci-Fi&#39;&lt;/code&gt; is not among the allowed genres." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-44">
+          <mxGeometry x="670" width="170" height="130" as="geometry">
+            <mxRectangle width="170" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-49" value="Use only allowed values: &#39;Fiction&#39;, &#39;Non-fiction&#39;, &#39;Reference&#39;, &#39;Children&#39;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-44">
+          <mxGeometry x="840" width="210" height="130" as="geometry">
+            <mxRectangle width="210" height="130" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-50" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="960" width="1050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-51" value="Inserting a payment with a zero or negative amount" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-50">
+          <mxGeometry width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-52" value="&lt;div&gt;INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate)&lt;/div&gt;&lt;div&gt;VALUES (&#39;2025-06-01&#39;, 0, &#39;Cash&#39;, 1, 1, &#39;2024-05-01&#39;);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-50">
+          <mxGeometry x="210" width="220" height="120" as="geometry">
+            <mxRectangle width="220" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-53" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 275&lt;/div&gt;&lt;div&gt;The INSERT statement conflicted with the CHECK constraint &quot;CK__Payment__Amount__4CA06362&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Payment&quot;, column &#39;Amount&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-50">
+          <mxGeometry x="430" width="240" height="120" as="geometry">
+            <mxRectangle width="240" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-54" value="&lt;code data-end=&quot;3862&quot; data-start=&quot;3854&quot;&gt;Amount&lt;/code&gt; must be &amp;gt; 0." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-50">
+          <mxGeometry x="670" width="170" height="120" as="geometry">
+            <mxRectangle width="170" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-55" value="nsure amount is a positive value." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-50">
+          <mxGeometry x="840" width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-56" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="1080" width="1050" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-57" value="&amp;nbsp;Inserting a payment with a missing payment method" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-56">
+          <mxGeometry width="210" height="150" as="geometry">
+            <mxRectangle width="210" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-58" value="&lt;div&gt;INSERT INTO Payment (PaymentDate, Amount, Method, MID, BID, LoanDate)&lt;/div&gt;&lt;div&gt;VALUES (&#39;2025-06-01&#39;, 5.00, NULL, 1, 1, &#39;2024-05-01&#39;);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-56">
+          <mxGeometry x="210" width="220" height="150" as="geometry">
+            <mxRectangle width="220" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-59" value="&lt;div&gt;Msg 515, Level 16, State 2, Line 278&lt;/div&gt;&lt;div&gt;Cannot insert the value NULL into column &#39;Method&#39;, table &#39;LibraryManagementSystem.dbo.Payment&#39;; column does not allow nulls. INSERT fails.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-56">
+          <mxGeometry x="430" width="240" height="150" as="geometry">
+            <mxRectangle width="240" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-60" value="&lt;code data-end=&quot;4327&quot; data-start=&quot;4319&quot;&gt;Method&lt;/code&gt; column is &lt;code data-end=&quot;4348&quot; data-start=&quot;4338&quot;&gt;NOT NULL&lt;/code&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-56">
+          <mxGeometry x="670" width="170" height="150" as="geometry">
+            <mxRectangle width="170" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-61" value="Provide a valid payment method." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-56">
+          <mxGeometry x="840" width="210" height="150" as="geometry">
+            <mxRectangle width="210" height="150" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-62" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="1230" width="1050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-63" value="Inserting a review for a book that does not exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-62">
+          <mxGeometry width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-64" value="&lt;div&gt;INSERT INTO Review (MID, BID, ReviewDate, Comments, Rating)&lt;/div&gt;&lt;div&gt;VALUES (1, 999, &#39;2025-06-01&#39;, &#39;Fake book&#39;, 3);&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-62">
+          <mxGeometry x="210" width="220" height="120" as="geometry">
+            <mxRectangle width="220" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-65" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 281&lt;/div&gt;&lt;div&gt;The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK__Review__BID__534D60F1&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Book&quot;, column &#39;ID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-62">
+          <mxGeometry x="430" width="240" height="120" as="geometry">
+            <mxRectangle width="240" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-66" value="Book ID 999 doesn’t exist." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-62">
+          <mxGeometry x="670" width="170" height="120" as="geometry">
+            <mxRectangle width="170" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-67" value="Add the book first or use valid Book ID" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-62">
+          <mxGeometry x="840" width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-68" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="1350" width="1050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-69" value="Inserting a review for a member who was never registered" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-68">
+          <mxGeometry width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-70" value="&lt;div&gt;INSERT INTO Review (MID, BID, ReviewDate, Comments, Rating)&lt;/div&gt;&lt;div&gt;VALUES (999, 1, &#39;2025-06-01&#39;, &#39;Ghost member review&#39;, 4);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-68">
+          <mxGeometry x="210" width="220" height="120" as="geometry">
+            <mxRectangle width="220" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-71" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 284&lt;/div&gt;&lt;div&gt;The INSERT statement conflicted with the FOREIGN KEY constraint &quot;FK__Review__MID__52593CB8&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Member&quot;, column &#39;ID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-68">
+          <mxGeometry x="430" width="240" height="120" as="geometry">
+            <mxRectangle width="240" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-72" value="Member ID 999 does not exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-68">
+          <mxGeometry x="670" width="170" height="120" as="geometry">
+            <mxRectangle width="170" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-73" value="Create the member first or correct ID" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-68">
+          <mxGeometry x="840" width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-74" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-1">
+          <mxGeometry y="1470" width="1050" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-75" value="Updating a foreign key in Loan to a value that doesn’t exist" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-74">
+          <mxGeometry width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-76" value="UPDATE Loan SET MID = 999 WHERE MID = 1 AND BID = 1 AND LoanDate = &#39;2024-05-01&#39;;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-74">
+          <mxGeometry x="210" width="220" height="120" as="geometry">
+            <mxRectangle width="220" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-77" value="&lt;div&gt;Msg 547, Level 16, State 0, Line 287&lt;/div&gt;&lt;div&gt;The UPDATE statement conflicted with the FOREIGN KEY constraint &quot;FK__Loan__MID__48CFD27E&quot;. The conflict occurred in database &quot;LibraryManagementSystem&quot;, table &quot;dbo.Member&quot;, column &#39;ID&#39;.&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-74">
+          <mxGeometry x="430" width="240" height="120" as="geometry">
+            <mxRectangle width="240" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-78" value="Cannot reference a non-existent member ID" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-74">
+          <mxGeometry x="670" width="170" height="120" as="geometry">
+            <mxRectangle width="170" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ECOyqSFVC0UCyz7kklvq-79" value="Make sure the foreign key exists before updating" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="ECOyqSFVC0UCyz7kklvq-74">
+          <mxGeometry x="840" width="210" height="120" as="geometry">
+            <mxRectangle width="210" height="120" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
