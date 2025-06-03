@@ -349,5 +349,214 @@ JOIN Book B ON R.BID = B.ID;
 --	how ON DELETE CASCADE ON UPDATE CASCADE work
 
 
+--------------------------------------------------project part two----------------------------------------------------
+
+-- Advance SELECT Queries
+
+-- GET /books/popular → List top 3 books by number of times they were loaned 
+SELECT TOP 3 B.ID AS BookID, B.Title, COUNT(*) AS LoanCount
+FROM Loan L JOIN Book B ON L.BID = B.ID
+GROUP BY B.ID, B.Title
+ORDER BY LoanCount DESC;
+
+-- GET /members/:id/history → Retrieve full loan history of a specific member including book title, loan & return dates 
+SELECT B.Title, L.LoanDate, L.DueDate, L.ReturnDate, L.Status
+FROM Loan L JOIN Book B ON L.BID = B.ID
+WHERE L.MID = 5;
+
+-- GET /books/:id/reviews → Show all reviews for a book with member name and comments 
+SELECT M.FullName AS MemberName, R.Comments, R.Rating, R.ReviewDate
+FROM Review R JOIN Member M ON R.MID = M.ID
+WHERE R.BID = 4;
+
+-- GET /libraries/:id/staff → List all staff working in a given library 
+SELECT S.ID AS StaffID, S.FullName, S.Position, S.ContactNumber
+FROM Staff S
+WHERE S.LID = 3;
+
+-- GET /books/price-range?min=5&max=15 → Show books whose prices fall within a given range 
+SELECT ID AS BookID, Title, Price
+FROM Book
+WHERE Price BETWEEN 5 AND 15;
+
+-- GET /loans/active → List all currently active loans (not yet returned) with member and book info 
+SELECT M.FullName AS MemberName, B.Title AS BookTitle, L.LoanDate, L.DueDate
+FROM Loan L JOIN Member M ON L.MID = M.ID
+JOIN Book B ON L.BID = B.ID
+WHERE L.ReturnDate IS NULL;
+
+-- GET /members/with-fines → List members who have paid any fine 
+SELECT DISTINCT M.ID AS MemberID, M.FullName
+FROM Payment P JOIN  Member M ON P.MID = M.ID;
+
+-- GET /books/never-reviewed →  List books that have never been reviewed 
+SELECT B.ID AS BookID, B.Title
+FROM Book B LEFT JOIN Review R ON B.ID = R.BID
+WHERE R.BID IS NULL;
+
+-- GET /members/:id/loan-history →Show a member’s loan history with book titles and loan status
+SELECT B.Title, L.LoanDate, L.ReturnDate, L.Status
+FROM Loan L JOIN Book B ON L.BID = B.ID
+WHERE L.MID = 6;
+
+-- GET /members/inactive →List all members who have never borrowed any book
+SELECT M.ID AS MemberID, M.FullName
+FROM Member M LEFT JOIN Loan L ON M.ID = L.MID
+WHERE L.BID IS NULL;
+
+-- GET /books/never-loaned → List books that were never loaned 
+SELECT B.ID AS BookID, B.Title
+FROM Book B LEFT JOIN Loan L ON B.ID = L.BID
+WHERE L.BID IS NULL;
+
+-- GET /payments →List all payments with member name and book title
+SELECT P.ID AS PaymentID, M.FullName AS MemberName, B.Title AS BookTitle, P.Amount, P.Method, P.PaymentDate
+FROM Payment P JOIN Member M ON P.MID = M.ID
+JOIN Book B ON P.BID = B.ID;
+
+-- GET /loans/overdue→ List all overdue loans with member and book details 
+SELECT M.FullName AS MemberName, B.Title AS BookTitle, L.DueDate
+FROM Loan L JOIN Member M ON L.MID = M.ID
+JOIN Book B ON L.BID = B.ID
+WHERE L.ReturnDate IS NULL AND L.DueDate < GETDATE();
+
+-- GET /books/:id/loan-count → Show how many times a book has been loaned
+SELECT B.ID AS BookID, B.Title, COUNT(*) AS LoanCount
+FROM Loan L JOIN Book B ON L.BID = B.ID
+WHERE B.ID = 1
+GROUP BY B.ID, B.Title;
+
+-- GET /members/:id/fines → Get total fines paid by a member across all loans
+SELECT M.ID AS MemberID, M.FullName, SUM(P.Amount) AS TotalFines
+FROM Payment P JOIN Member M ON P.MID = M.ID
+WHERE M.ID = 8
+GROUP BY M.ID, M.FullName;
+
+-- GET /libraries/:id/book-stats → Show count of available and unavailable books in a library 
+SELECT L.ID AS LibraryID, SUM(CASE WHEN Loan.BID IS NULL THEN 1 ELSE 0 END) AS AvailableBooks, SUM(CASE WHEN Loan.BID IS NOT NULL THEN 1 ELSE 0 END) AS UnavailableBooks
+FROM Library L JOIN Book B ON L.ID = B.LID
+LEFT JOIN (SELECT BID FROM Loan WHERE ReturnDate IS NULL) AS Loan ON B.ID = Loan.BID
+WHERE L.ID = 3
+GROUP BY L.ID;
+
+-- GET /reviews/top-rated → Return books with more than 5 reviews and average rating > 4.5
+SELECT B.ID AS BookID, B.Title, AVG(R.Rating) AS AvgRating, COUNT(R.BID) AS ReviewCount
+FROM Review R JOIN Book B ON R.BID = B.ID
+GROUP BY B.ID, B.Title
+HAVING COUNT(R.BID) > 5 AND AVG(R.Rating) > 4.5;
+
+-- Simple Views Practice
+
+-- ViewAvailableBooks: A list of all books marked as available. 
+CREATE VIEW ViewAvailableBooks AS
+SELECT 
+    ID AS BookID,
+    Title,
+    ISBN,
+    Genre,
+    Price,
+    ShelfLocation,
+    LID
+FROM 
+    Book
+WHERE 
+    AvailabilityStatus = 1;
+
+-- test it
+SELECT * FROM ViewAvailableBooks;
+
+-- ViewActiveMembers: Members whose membership started in the past 12 months. 
+CREATE VIEW ViewActiveMembers AS
+SELECT 
+    ID AS MemberID,
+    FullName,
+    Email,
+    PhoneNumber,
+    StartDate
+FROM 
+    Member
+WHERE 
+    StartDate >= DATEADD(MONTH, -12, GETDATE());
+
+-- test it 
+SELECT * FROM ViewActiveMembers;
+
+-- ViewLibraryContacts: List of libraries and their contact numbers. 
+CREATE VIEW ViewLibraryContacts AS
+SELECT 
+    ID AS LibraryID,
+    Name AS LibraryName,
+    ContactNumber
+FROM 
+    Library;
+
+-- test it
+SELECT * FROM ViewLibraryContacts;
+
+
+-- Transactions & Aggregation Functions
+-- Section A: Transactions Simulation 
+
+BEGIN TRANSACTION;
+
+BEGIN TRY
+    -- A member borrows a book → a loan is inserted → book availability must be set to FALSE.
+
+    -- Step 1: Insert a loan record
+    INSERT INTO Loan (MID, BID, LoanDate, DueDate, ReturnDate, Status)
+    VALUES (1, 4, '2025-06-02', '2025-06-16', NULL, 'Issued');
+
+    -- Step 2: Update book availability to FALSE (0)
+    UPDATE Book
+    SET AvailabilityStatus = 0
+    WHERE ID = 4;
+
+    -- Step 3: Commit if both succeed
+    COMMIT;
+    PRINT 'Transaction committed successfully.';
+END TRY
+
+BEGIN CATCH
+    -- Roll back everything if an error occurs
+    ROLLBACK;
+    PRINT 'Transaction failed. All changes rolled back.';
+
+    -- Optional: Show error details for debugging
+    SELECT 
+        ERROR_NUMBER() AS ErrorNumber,
+        ERROR_MESSAGE() AS ErrorMessage;
+END CATCH;
+
+-- Section B: Aggregation Functions Practice 
+
+-- Count Total Books in Each Genre
+SELECT Genre, COUNT(*) AS TotalBooks
+FROM Book
+GROUP BY Genre;
+
+-- Average Rating Per Book
+SELECT BID AS BookID, AVG(Rating) AS AverageRating
+FROM Review
+GROUP BY BID;
+
+-- Total Fine Paid by Each Member
+SELECT MID AS MemberID, SUM(Amount) AS TotalFinePaid
+FROM Payment
+GROUP BY MID;
+
+-- Highest Payment Ever Made
+SELECT MAX(Amount) AS HighestPayment
+FROM Payment;
+
+-- Number of Loans Per Member
+SELECT MID AS MemberID, COUNT(*) AS LoanCount
+FROM Loan
+GROUP BY MID;
+
+
+
+
+
+
 
 
